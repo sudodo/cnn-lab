@@ -1,2 +1,2 @@
-# chainer-mnist-challenge
-pursue best classification on mnist dataset using chainer
+# cnn-lab
+Convolutional Neural Network Laboratory
