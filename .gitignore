@@ -6,6 +6,9 @@ __pycache__/
 # mnist
 /mldata
 .idea/
+README.md
+graphs/
+results/*
 
 # C extensions
 *.so
