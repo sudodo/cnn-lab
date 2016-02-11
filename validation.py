@@ -70,14 +70,14 @@ def k_fold_validation(k, model, optimizer=optimizers.Adam(), tag='', batch=100, 
 
 
 def which_is_best_optimizer(k=10, model=CNN()):
-#    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.Adam(), tag='Adam')
-#    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.SGD(), tag='SGD')
-#    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.RMSpropGraves(), tag='RMSpropGraves')
-    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.RMSprop(), tag='RMSprop')
-#    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.AdaDelta(), tag='AdaDelta')
-#    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.AdaGrad(), tag='AdaGrad')
-#    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.MomentumSGD(), tag='MomentumSGD')
-#    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.NesterovAG(), tag='NesterovAG')
+    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.Adam(), tag='Adam')
+    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.SGD(), tag='SGD')
+    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.RMSpropGraves(), tag='RMSpropGraves')
+#    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.RMSprop(), tag='RMSprop')
+    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.AdaDelta(), tag='AdaDelta')
+    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.AdaGrad(), tag='AdaGrad')
+    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.MomentumSGD(), tag='MomentumSGD')
+    k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.NesterovAG(), tag='NesterovAG')
 
 
 if __name__ == '__main__':
