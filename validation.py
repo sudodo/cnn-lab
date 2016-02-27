@@ -6,6 +6,12 @@ import copy
 
 
 def validate_model(model, optimizer, x_train, x_test, t_train, t_test, batch, n_epoch):
+    
+    x_train = x_train[1:100]
+    t_train = t_train[1:100]
+    x_test = x_test[1:100]
+    t_test = t_test[1:100]
+    
     train_size = t_train.size
     test_size = t_test.size
     print train_size, test_size
@@ -64,9 +70,9 @@ def k_fold_validation(k, model, optimizer=optimizers.Adam(), tag='', batch=100, 
         loss.append(l)
         acc.append(a)
         acc_train.append(at)
-    save_result('results/'+str(model)+'_'+tag+'_loss.txt', loss)
-    save_result('results/'+str(model)+'_'+tag+'_accuracy.txt', acc)
-    save_result('results/'+str(model)+'_'+tag+'_accuracy_train.txt', acc_train)
+    #save_result('results/'+str(model)+'_'+tag+'_loss.txt', loss)
+    #save_result('results/'+str(model)+'_'+tag+'_accuracy.txt', acc)
+    #save_result('results/'+str(model)+'_'+tag+'_accuracy_train.txt', acc_train)
 
 
 def which_is_best_optimizer(k=10, model=CNN()):
@@ -80,8 +86,8 @@ def which_is_best_optimizer(k=10, model=CNN()):
     k_fold_validation(k, copy.deepcopy(model), optimizer=optimizers.NesterovAG(), tag='NesterovAG')
 
 
-if __name__ == '__main__':
-    which_is_best_optimizer(model=CNN())
+#if __name__ == '__main__':
+#    which_is_best_optimizer(model=CNN())
 
 
 
